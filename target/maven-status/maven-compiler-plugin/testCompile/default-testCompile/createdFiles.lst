@@ -1,0 +1,5 @@
+com/yakshop/model/LabYakTest.class
+com/yakshop/QueryYaksTest.class
+com/yakshop/AppTest.class
+com/yakshop/dataloader/YakXmlLoaderImplNegativeTests.class
+com/yakshop/dataloader/YakXmlLoaderImplPositiveTests.class

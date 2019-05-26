@@ -1,0 +1,11 @@
+com/yakshop/model/LabYak.class
+com/yakshop/model/YakProduce.class
+com/yakshop/dataloader/YakLoader.class
+com/yakshop/util/Common.class
+com/yakshop/dataloader/Source.class
+com/yakshop/dataloader/Source$DefaultXmlSource.class
+com/yakshop/dataloader/YakXmlLoaderImpl.class
+com/yakshop/QueryYaks.class
+com/yakshop/App.class
+com/yakshop/model/YakGender.class
+com/yakshop/model/Yak.class
