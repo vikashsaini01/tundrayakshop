@@ -1,38 +1,34 @@
 package com.yakshop;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import java.math.BigDecimal;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
+import com.yakshop.model.Yak;
+import com.yakshop.model.YakProduce;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+public class AppTest {
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
+	@Test
+	public void testAppConstructorAndDisplay() throws URISyntaxException {
+		URL resource = this.getClass().getClassLoader().getResource("BasicHerd.xml");
+		String path = Paths.get(resource.toURI()).toString();
+		App app = new App(path);
+		List<Yak> yaks = new ArrayList<Yak>();
+		app.displayHerd(yaks);
+		app.displayStock(new YakProduce(BigDecimal.ZERO, 0));
+	}
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+	@Test(expected = IllegalArgumentException.class)
+	public void testAppMainInvalid() throws URISyntaxException {
+		App.main(null);
+	}
 }

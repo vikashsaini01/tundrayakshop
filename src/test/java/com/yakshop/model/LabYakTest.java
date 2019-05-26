@@ -74,4 +74,10 @@ public class LabYakTest {
 		}
 		assertEquals("no of wools is wrong", 1, labYak.getWools());
 	}
+	
+	@Test
+	public void testToString() {
+		Yak labYak = new LabYak("Yak-1", new BigDecimal(4), YakGender.F);
+		assertEquals("LabYak toString value doesnt match", labYak.toString(), "	Yak-1 4.00 years old");
+	}
 }

@@ -35,8 +35,7 @@ public class YakXmlLoaderImplNegativeTests {
 		String path = Paths.get(resource.toURI()).toString();
 		yakLoader =  new YakXmlLoaderImpl();
 		source =  new Source.DefaultXmlSource(path);
-		List<Yak> yaks = yakLoader.loadYaks(source);
-		fail("Yak loading should have failed because of IllegalArgumentException");
+		yakLoader.loadYaks(source);
 	}
 	
 	
